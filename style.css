@@ -80,4 +80,21 @@ a {
   display: flex;
   justify-content: end;
   margin-top: 30px;
+  padding: 30px;
+}
+
+.pagenumber {
+  border: none;
+  background-color: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pagenumber:hover {
+  background-color: black;
+  color: white;
+}
+
+.numberscards {
+  margin-left: 10px;
 }

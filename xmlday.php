@@ -44,9 +44,9 @@
           $numberOfArticlesWantedInteger = intval($_GET['articlesNumber']);
           $numberOfPages = count($xml->channel->item) / $numberOfArticlesWantedInteger;
           echo "<div id='pagesnumbers'>";
-          for ($j = 0; $j < $numberOfPages; $j++) {
-            echo "<div>
-            <input type='submit' value='$j' name='page'>
+          for ($j = 1; $j < $numberOfPages; $j++) {
+            echo "<div class='numberscards'>
+            <input type='submit' value='$j' name='page' class='pagenumber'>
             </div>
             ";
           }
