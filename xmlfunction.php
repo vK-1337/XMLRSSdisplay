@@ -3,7 +3,7 @@ function xmlToPage($url, $numberOfArticles, $page)
 {
   $xml = file_get_contents($url);
   $xml = simplexml_load_string($xml);
-  if ($page === 1) {
+  if ($page === 1 || !$_GET['page']) {
     $i = 0;
     foreach ($xml->channel->item as $news) {
       $i++;
@@ -23,17 +23,17 @@ function xmlToPage($url, $numberOfArticles, $page)
       echo "</div></div>";
       echo "</a>";
       if ($i >= $numberOfArticles) {
-        echo "<span>$i</span>";
         break;
       }
     }
   } else {
-    $i = $numberOfArticles;
+    $j = 0;
+    $i = $numberOfArticles * $page + 1;
     foreach ($xml->channel->item as $news) {
-      $i++;
+      $j++;
       $content = $news->children('media', true)->content;
       $contentattr = $content->attributes();
-      if ( $i <= $numberOfArticles*2 ) {
+      if ( $j >= $i ) {
         if (isset($contentattr)) {
           $image = $contentattr["url"];
         }
@@ -47,8 +47,7 @@ function xmlToPage($url, $numberOfArticles, $page)
         echo "<div>$news->description</div>";
         echo "</div></div>";
         echo "</a>";
-        if ($i >= $numberOfArticles * 2) {
-          echo "<span>$i</span>";
+        if ( $j > $numberOfArticles * $page + $numberOfArticles - 1 ) {
           break;
         }
       }

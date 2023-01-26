@@ -88,6 +88,12 @@ a {
   background-color: none;
   padding: 10px;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+#active {
+  background-color: black;
+  color: white;
 }
 
 .pagenumber:hover {
