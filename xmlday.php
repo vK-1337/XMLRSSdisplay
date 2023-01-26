@@ -29,7 +29,7 @@
         </div>
         <!-- Default value for article number filter is 5, but if its more the code below get the number from url via GET and put it in the range input -->
         <div class="textFormat" id="numberChoice">
-          <label for="articlesNumber">Nombre d'articles par page désirés : </label>
+          <label for="articlesNumber">Nombre d'articles par page : </label>
           <?php if(isset($_GET['articlesNumber'])) {
               $numberValue = $_GET['articlesNumber'];
             } else {
