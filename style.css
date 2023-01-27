@@ -95,7 +95,7 @@ a {
   border-radius: 5px;
 }
 
-#active {
+.active {
   background-color: black;
   color: white;
 }
