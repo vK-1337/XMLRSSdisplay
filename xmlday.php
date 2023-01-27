@@ -1,3 +1,7 @@
+<!-- Disabling warning errors -->
+<?php
+error_reporting(E_ERROR | E_PARSE);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,9 +50,7 @@
         <?php if (isset($_GET['pageLink']) && isset($_GET['articlesNumber'])) {
           $url = $_GET['pageLink'];
           // REGEX below checks if the url is valid
-          preg_match_all('~[^https://www][.].+[$rss_full.xml]~', $url, $matches);
-
-          if (!empty($matches[0])) {
+          if (file_get_contents($url)) {
             $xml = file_get_contents($url);
             $xml = simplexml_load_string($xml);
             // intval function is there to get the number from the articlesNumber string
@@ -91,11 +93,12 @@
             } else {
               $page = 1;
             }
-            if (!empty($matches[0])) {
+            if (file_get_contents($url)) {
               xmlToPage($url, $numberOfArticles, $page);
             } else {
               // Invalid input error message
               echo "<div id='invalink' class='textFormat'> Lien non valide, veuillez entrer un lien .XML valide </div>";
+              echo "<div id='willDiv'><img src='./images/will-smith-crying-meme.jpeg' alt='Will Smith crying' id='willSmithCrying'><div>";
             }
           }
       ?>

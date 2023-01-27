@@ -113,3 +113,14 @@ a {
   text-align: center;
   margin-top: 30px;
 }
+
+#willSmithCrying {
+  height: 400px;
+  width: 600px;
+}
+
+#willDiv {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
