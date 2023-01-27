@@ -55,6 +55,10 @@ a {
   width: 200px;
 }
 
+#formBtn:hover {
+  background-color: black;
+}
+
 .formBtn {
   text-align: center;
   margin-top: 20px;
@@ -103,4 +107,9 @@ a {
 
 .numberscards {
   margin-left: 10px;
+}
+
+#invalink {
+  text-align: center;
+  margin-top: 30px;
 }
