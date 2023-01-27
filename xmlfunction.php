@@ -1,8 +1,6 @@
 <?php
 function xmlToPage($url, $numberOfArticles, $page)
 {
-  preg_match_all('~https://www[.].+[$rss_full.xml]~', $url, $matches);
-  if ( !empty($matches[0])) {
     $xml = file_get_contents($url);
     $xml = simplexml_load_string($xml);
     // If page is page 1 or there is no page number we are generating articles from the first one, this is why $i starts at 0
@@ -66,8 +64,5 @@ function xmlToPage($url, $numberOfArticles, $page)
         }
       }
     }
-  } else {
-    echo "<div id='invalink' class='textFormat'> Lien non valide, veuillez entrer un lien .XML valide </div>";
   }
-}
 ?>

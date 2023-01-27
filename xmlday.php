@@ -45,7 +45,9 @@
         <!-- This is the pages numbers buttons which are generated depending on how much articles per page there is -->
         <?php if (isset($_GET['pageLink']) && isset($_GET['articlesNumber'])) {
           $url = $_GET['pageLink'];
+          // REGEX below checks if the url is valid
           preg_match_all('~[^https://www][.].+[$rss_full.xml]~', $url, $matches);
+
           if (!empty($matches[0])) {
             $xml = file_get_contents($url);
             $xml = simplexml_load_string($xml);
@@ -89,7 +91,12 @@
             } else {
               $page = 1;
             }
-            xmlToPage($url, $numberOfArticles, $page);
+            if (!empty($matches[0])) {
+              xmlToPage($url, $numberOfArticles, $page);
+            } else {
+              // Invalid input error message
+              echo "<div id='invalink' class='textFormat'> Lien non valide, veuillez entrer un lien .XML valide </div>";
+            }
           }
       ?>
     </div>
