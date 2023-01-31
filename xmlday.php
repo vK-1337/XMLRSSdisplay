@@ -28,7 +28,7 @@ error_reporting(E_ERROR | E_PARSE);
             }
             ?>
             <!-- end -->
-            <input type="text" name="pageLink" id="pageLink" class="textFormat" required value=<?= $urlValue ?>>
+            <input type="text" name="pageLink" id="pageLink" class="textFormat" value=<?= $urlValue ?>>
           </div>
         </div>
         <!-- Default value for article number filter is 5, but if its more the code below get the number from url via GET and put it in the range input -->
@@ -46,6 +46,59 @@ error_reporting(E_ERROR | E_PARSE);
         <div class="formBtn">
           <input type="submit" value="C'est parti!" id="formBtn" class="textFormat">
         </div>
+        <!-- This div is displaying all the fast link to some RSS flux -->
+        <!-- This div is disapearing if a link is entered -->
+        <?php if (empty($_GET['pageLink'])){ ?>
+                <div id="fastLinksDiv" class="textFormat">
+                  <div id="fastLinksTitle"> Pas de liens ? Voici quelques suggestions ⬇️ 😉</div>
+                  <div id="categoriesDiv">
+                    <form action="" method="get" class="form">
+                      <div class="fastLinkCategory">
+                        <p class="categoryTitles">Sports</p>
+                        <div class="categoryLinks">
+                          <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Esport/" name='pageLink' class="linkBtn textFormat">E-sports</button></div>
+                          <div><button type="submit" value="https://services.lesechos.fr/rss/les-echos-economie.xml" name="pageLink" class="linkBtn textFormat">Basket</div>
+                          <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Football/" name="pageLink" class="linkBtn textFormat">Football</button></div>
+                          <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Rugby/" name="pageLink" class="linkBtn textFormat">Rugby</button></div>
+                          <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Tennis/" name="pageLink" class="linkBtn textFormat">Tennis</button></div>
+                          <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Rallye/" name="pageLink" class="linkBtn textFormat">Rallye</button></div>
+                          <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Formule-1" name="pageLink" class="linkBtn textFormat">Formule 1</button></div>
+                        </div>
+                      </div>
+                      <div class="fastLinkCategory">
+                        <p class="categoryTitles">Economie</p>
+                        <div class="categoryLinks">
+                          <div><button type="submit" value="https://services.lesechos.fr/rss/les-echos-economie.xml" name="pageLink" class="linkBtn textFormat">Les echos</button></div>
+                          <div><button type="submit" value="https://feeds.leparisien.fr/leparisien/rss/economie" name="pageLink" class="linkBtn textFormat">Le parisien</button></div>
+                          <div><button type="submit" value="https://www.lemonde.fr/economie/rss_full.xml" name="pageLink" class="linkBtn textFormat">Le monde</button></div>
+                          <div><button type="submit" value="https://www.courrierinternational.com/feed/rubrique/economie/rss.xml" name="pageLink" class="linkBtn textFormat">Courrier international</button></div>
+                        </div>
+                      </div>
+                      <div class="fastLinkCategory">
+                        <p class="categoryTitles">Technologie</p>
+                        <div class="categoryLinks">
+                          <div><button type="submit" value="https://www.sciencesetavenir.fr/high-tech/rss.xml" name="pageLink" class="linkBtn textFormat">High-tech</button></div>
+                          <div><button type="submit" value="https://services.lesechos.fr/rss/les-echos-tech-medias.xml" name="pageLink" class="linkBtn textFormat">Tech et médias</button></div>
+                          <div><button type="submit" value="https://www.01net.com/actualites/feed/" name="pageLink" class="linkBtn textFormat">Actualités 01 net</button></div>
+                          <div><button type="submit" value="https://www.01net.com/actualites/produits/jeux-video-produits/feed/" name="pageLink" class="linkBtn textFormat">Jeux vidéos</button></div>
+                          <div><button type="submit" value="https://www.01net.com/actualites/produits/photo-produits/feed/" name="pageLink" class="linkBtn textFormat">Photo</button></div>
+                          <div><button type="submit" value="https://overclocking.com/feed/" name="pageLink" class="linkBtn textFormat">Overclocking / Hardware</button></div>
+                        </div>
+                      </div>
+                      <div class="fastLinkCategory">
+                        <p class="categoryTitles">Sciences</p>
+                        <div class="categoryLinks">
+                          <div><button type="submit" value="https://www.sciencesetavenir.fr/nutrition/rss.xml" name="pageLink" class="linkBtn textFormat">Nutrition</button></div>
+                          <div><button type="submit" value="https://www.sciencesetavenir.fr/sante/rss.xml" name="pageLink" class="linkBtn textFormat">Santé</button></div>
+                          <div><button type="submit" value="https://www.sciencesetavenir.fr/espace/rss.xml" name="pageLink" class="linkBtn textFormat">Espace</button></div>
+                          <div><button type="submit" value="https://www.sciencesetavenir.fr/nature-environnement/rss.xml" name="pageLink" class="linkBtn textFormat">Nature</button></div>
+                          <div><button type="submit" value="https://www.sciencesetavenir.fr/archeo-paleo/rss.xml" name="pageLink" class="linkBtn textFormat">Archéo & paléo</button></div>
+                          <div><button type="submit" value="https://www.sciencesetavenir.fr/fondamental/rss.xml" name="pageLink" class="linkBtn textFormat">Fondamental</button></div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+        <?php }?>
         <!-- This is the pages numbers buttons which are generated depending on how much articles per page there is -->
         <?php if (isset($_GET['pageLink']) && isset($_GET['articlesNumber'])) {
           $url = $_GET['pageLink'];
@@ -55,7 +108,6 @@ error_reporting(E_ERROR | E_PARSE);
             $xml = simplexml_load_string($xml);
             // intval function is there to get the number from the articlesNumber string
             $numberOfArticlesWantedInteger = intval($_GET['articlesNumber']);
-
             // The numberOfPages variable is there to count how much page we need
             $numberOfPages = count($xml->channel->item) / $numberOfArticlesWantedInteger;
             // Then we use numberOfPages to stop the loop when generating the pages buttons
@@ -79,7 +131,7 @@ error_reporting(E_ERROR | E_PARSE);
             }
           }
         }
-          ?>
+        ?>
         <!-- End of pages numbers buttons -->
       </form>
       <!-- End of form -->

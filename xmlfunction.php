@@ -23,7 +23,7 @@ function xmlToPage($url, $numberOfArticles, $page)
         }
         echo "<div id='cardRightSide'>";
         echo "<div id='title'>$news->title</div>";
-        echo "<div>$news->description</div>";
+        echo "<div id='description'>$news->description</div>";
         echo "</div></div>";
         echo "</a>";
         // The foreach loop will break if it reaches the number of articles we asked
@@ -55,7 +55,7 @@ function xmlToPage($url, $numberOfArticles, $page)
           }
           echo "<div id='cardRightSide'>";
           echo "<div id='title'>$news->title</div>";
-          echo "<div>$news->description</div>";
+          echo "<div id='description'>$news->description</div>";
           echo "</div></div>";
           echo "</a>";
           // If $j reach the maximum number of article for 1 page then the loop breaks
