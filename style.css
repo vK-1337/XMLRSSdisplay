@@ -151,4 +151,9 @@ a {
   .textFormat {
     font-size: 100%;
   }
+
+  #willSmithCrying {
+    width: 90%;
+    height: 90%;
+  }
 }
