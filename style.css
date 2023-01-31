@@ -83,8 +83,9 @@ a {
 #pagesnumbers {
   display: flex;
   justify-content: end;
-  margin-top: 30px;
-  padding: 30px;
+  margin-right: 60px;
+  margin-top: 40px;
+  align-items: center;
 }
 
 .pagenumber {
@@ -93,6 +94,7 @@ a {
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 17px;
 }
 
 .active {
@@ -155,5 +157,14 @@ a {
   #willSmithCrying {
     width: 90%;
     height: 90%;
+  }
+
+  #formBtn {
+    width: 30%;
+
+  }
+
+  #pagesnumbers {
+    justify-content: center;
   }
 }
