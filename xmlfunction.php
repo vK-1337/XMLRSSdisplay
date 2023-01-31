@@ -16,7 +16,7 @@ function xmlToPage($url, $numberOfArticles, $page)
           $image = $contentattr["url"];
         }
         // Then generating the article
-        echo " <a href='$news->link'>";
+        echo "<a href='$news->link'>";
         echo "<div id='card'>";
         if (isset($image)) {
           echo "<div><img src='$image'/></div>";
@@ -31,6 +31,7 @@ function xmlToPage($url, $numberOfArticles, $page)
           break;
         }
       }
+      echo "<a href='#top'><div id='backToTopDiv'><button id='backToTopBtn' class='textFormat'> Haut de page </button></div></a>";
     } else {
       // $j is the start of our loop
       // $i will be the index to know when we need to start displaying articles that's why it gets the $_GET['articlesNumber'],
@@ -63,6 +64,9 @@ function xmlToPage($url, $numberOfArticles, $page)
           }
         }
       }
+      echo "<a href='#top'>";
+      echo "<div id='backToTopDiv'><button id='backToTopBtn' class='textFormat'> Haut de page </button></div>";
+      echo "</a>";
     }
   }
 ?>

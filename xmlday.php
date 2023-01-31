@@ -60,21 +60,23 @@ error_reporting(E_ERROR | E_PARSE);
             $numberOfPages = count($xml->channel->item) / $numberOfArticlesWantedInteger;
             // Then we use numberOfPages to stop the loop when generating the pages buttons
             echo "<div id='pagesnumbers'>";
-            echo "<p class='textFormat'> Pages :</p>";
-            // In the for loop, we use two variables :
-            // $i to put the right value in the URL which is the one we gonna pass in the function later when we click and submit the page
-            // $k to DISPLAY the value inside the button since we are human and counting from page 1 and not 0
-            for ($j = 0, $k = 1; $j < $numberOfPages; $j++, $k++) {
-              echo "<div class='numberscards'>";
-              // If this is the active page it will echo the div with black background
-              if ($j == $_GET['page']) {
-                echo "<button type='submit' value='$j' name='page' class='pagenumber active textFormat'>$k</button>";
-              } else {
-                echo "<button type='submit' value='$j' name='page' class='pagenumber textFormat'>$k</button>";
+            if ($numberOfPages > 1) {
+              echo "<p class='textFormat'> Pages :</p>";
+              // In the for loop, we use two variables :
+              // $i to put the right value in the URL which is the one we gonna pass in the function later when we click and submit the page
+              // $k to DISPLAY the value inside the button since we are human and counting from page 1 and not 0
+              for ($j = 0, $k = 1; $j < $numberOfPages; $j++, $k++) {
+                echo "<div class='numberscards'>";
+                // If this is the active page it will echo the div with black background
+                if ($j == $_GET['page']) {
+                  echo "<button type='submit' value='$j' name='page' class='pagenumber active textFormat'>$k</button>";
+                } else {
+                  echo "<button type='submit' value='$j' name='page' class='pagenumber textFormat'>$k</button>";
+                }
+                echo "</div>";
               }
               echo "</div>";
             }
-            echo "</div>";
           }
         }
           ?>

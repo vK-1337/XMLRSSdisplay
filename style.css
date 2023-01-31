@@ -29,6 +29,7 @@ img {
 a {
   text-decoration: none;
   color: black;
+  display: contents;
 }
 
 .formText {
@@ -127,6 +128,25 @@ a {
   justify-content: center;
 }
 
+#backToTopDiv {
+  text-align: end;
+  margin: 30px auto;
+  width: fit-content;
+}
+
+#backToTopBtn {
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#backToTopBtn:hover {
+  background-color: black;
+  color: white;
+}
+
 @media screen and (max-width: 1024px) {
 
   img {
@@ -161,10 +181,10 @@ a {
 
   #formBtn {
     width: 30%;
-
   }
 
   #pagesnumbers {
     justify-content: center;
+    font-size: 80%;
   }
 }
