@@ -124,3 +124,31 @@ a {
   display: flex;
   justify-content: center;
 }
+
+@media screen and (max-width: 1024px) {
+
+  img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #card {
+   display: block;
+   width: 70%;
+   font-size: 90%;
+  }
+
+  #cardRightSide {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+   #pageLink {
+    width: 80%;
+  }
+
+  .textFormat {
+    font-size: 100%;
+  }
+}
