@@ -8,7 +8,7 @@ error_reporting(E_ERROR | E_PARSE);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Articles XML</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -57,7 +57,7 @@ error_reporting(E_ERROR | E_PARSE);
                         <p class="categoryTitles">Sports</p>
                         <div class="categoryLinks">
                           <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Esport/" name='pageLink' class="linkBtn textFormat">E-sports</button></div>
-                          <div><button type="submit" value="https://services.lesechos.fr/rss/les-echos-economie.xml" name="pageLink" class="linkBtn textFormat">Basket</div>
+                          <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Basket/" name="pageLink" class="linkBtn textFormat">Basket</div>
                           <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Football/" name="pageLink" class="linkBtn textFormat">Football</button></div>
                           <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Rugby/" name="pageLink" class="linkBtn textFormat">Rugby</button></div>
                           <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Tennis/" name="pageLink" class="linkBtn textFormat">Tennis</button></div>
