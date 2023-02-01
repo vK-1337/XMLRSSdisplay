@@ -12,6 +12,15 @@ error_reporting(E_ERROR | E_PARSE);
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div id="navBar" class="textFormat">
+      <div id="homeBtn">
+        Accueil
+      </div>
+      <div id="rightNav">
+        <div><img src="./images/English.png" alt=""></div>
+        <div><img src="./images/French.png" alt=""></div>
+      </div>
+    </div>
     <div id="mainDivForm">
       <!-- Form starts here -->
       <form action="" method="get" class="form">
@@ -57,7 +66,7 @@ error_reporting(E_ERROR | E_PARSE);
                         <p class="categoryTitles">Sports</p>
                         <div class="categoryLinks">
                           <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Esport/" name='pageLink' class="linkBtn textFormat">E-sports</button></div>
-                          <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Basket/" name="pageLink" class="linkBtn textFormat">Basket</div>
+                          <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Basket/Nba " name="pageLink" class="linkBtn textFormat">Basket</div>
                           <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Football/" name="pageLink" class="linkBtn textFormat">Football</button></div>
                           <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Rugby/" name="pageLink" class="linkBtn textFormat">Rugby</button></div>
                           <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Tennis/" name="pageLink" class="linkBtn textFormat">Tennis</button></div>
