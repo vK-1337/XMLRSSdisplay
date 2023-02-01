@@ -20,6 +20,10 @@ body::-webkit-scrollbar {
   padding: 10px 0;
 }
 
+#navBar a {
+  color: white;
+}
+
 #rightNav {
   width: 120px;
   display: flex;
