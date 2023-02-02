@@ -53,7 +53,7 @@ error_reporting(E_ERROR | E_PARSE);
         </div>
         <!-- end -->
         <div class="formBtn">
-          <input type="submit" value="C'est parti!" id="formBtn" class="textFormat">
+          <input type="submit" value="C'est parti !" id="formBtn" class="textFormat">
         </div>
         <!-- This div is displaying all the fast link to some RSS flux -->
         <!-- This div is disapearing if a link is entered -->
