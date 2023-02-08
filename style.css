@@ -1,6 +1,5 @@
 
 body {
-  width: 100%;
   margin: 0;
 }
 
@@ -8,10 +7,16 @@ body {
   padding-top: 30px;
 }
 
+#flags {
+  width: 400px;
+  display: flex;
+}
+
 body::-webkit-scrollbar {
   width: 0;
   margin: 0;
 }
+
 
 #navBar {
   display: flex;
@@ -29,15 +34,14 @@ body::-webkit-scrollbar {
 }
 
 #rightNav {
-  width: 120px;
+  width: 220px;
   display: flex;
-  justify-content: space-around;
 }
 
 #rightNav img {
+  padding-left: 20px;
   width: 30px;
   height: 30px;
-  margin-right: 20px;
 }
 
 #homeBtn {

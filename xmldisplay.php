@@ -3,7 +3,6 @@
 require('checks.php');
 error_reporting(E_ERROR | E_PARSE);
 ?>
-<?= $_COOKIE['mode']?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,13 +20,15 @@ error_reporting(E_ERROR | E_PARSE);
         </div>
         <div id="rightNav">
           <!-- <form action="" method="get" id="nightModeForm"> -->
-            <div>
-              <button id='nightBtn' >MODE NUIT</button>
-              <button id='dayBtn'>MODE JOUR</button>
-            </div>
+          <div>
+            <button id='nightBtn' >MODE NUIT</button>
+            <button id='dayBtn'>MODE JOUR</button>
+          </div>
           <!-- </form> -->
-          <div><a href=./xmldisplay.php><img src="./images/French.png" alt="French flag"></a></div>
-          <div><a href=./xmldisplayENG.php><img src="./images/English.png" alt="English flag"></a></div>
+          <div id="flags">
+            <div id='frenchFlag'><a href=./xmldisplay.php><img src="./images/French.png" alt="French flag"></a></div>
+            <div id='englishFlag'><a href=./xmldisplayENG.php><img src="./images/English.png" alt="English flag"></a></div>
+          </div>
         </div>
       </div>
       <div id='documentBody'>
@@ -184,7 +185,7 @@ error_reporting(E_ERROR | E_PARSE);
       </div>
     </div>
     <div id="footer">
-      FOOTER HERE
+      FOOTER HERE FOOTER
     </div>
   </body>
   <!-- Javascript balise for night mode -->
