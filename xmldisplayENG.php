@@ -57,6 +57,7 @@ error_reporting(E_ERROR | E_PARSE);
         </div>
         <!-- This div is displaying all the fast link to some RSS flux -->
         <!-- This div is disapearing if a link is entered -->
+        <?php $dayOrNight = classCheck() ?>
         <?php if (empty($_GET['pageLink'])){ ?>
                 <div id="fastLinksDiv" class="textFormat">
                   <div id="fastLinksTitle"> No link ? Few suggestions ⬇️ 😉</div>
@@ -65,28 +66,28 @@ error_reporting(E_ERROR | E_PARSE);
                       <div class="fastLinkCategory">
                         <p class="categoryTitles">Sports</p>
                         <div class="categoryLinks">
-                          <div><button type="submit" value="https://news.google.com/rss/search?q=eSports" name='pageLink' class="linkBtn textFormat">E-sports</button></div>
-                          <div><button type="submit" value="https://www.foxsports.com.au/content-feeds/nba/" name="pageLink" class="linkBtn textFormat">Basket</div>
-                          <div><button type="submit" value="https://www.lemonde.fr/en/football//rss_full.xml" name="pageLink" class="linkBtn textFormat">Football</button></div>
-                          <div><button type="submit" value="https://www.lemonde.fr/en/rugby/rss_full.xml" name="pageLink" class="linkBtn textFormat">Rugby</button></div>
-                          <div><button type="submit" value="https://news.google.com/rss/search?q=Tennis" name="pageLink" class="linkBtn textFormat">Tennis</button></div>
+                          <div><button type="submit" value="https://news.google.com/rss/search?q=eSports" name='pageLink' class="linkBtnDay textFormat">E-sports</button></div>
+                          <div><button type="submit" value="https://www.foxsports.com.au/content-feeds/nba/" name="pageLink" class="linkBtnDay textFormat">Basket</div>
+                          <div><button type="submit" value="https://www.lemonde.fr/en/football//rss_full.xml" name="pageLink" class="linkBtnDay textFormat">Football</button></div>
+                          <div><button type="submit" value="https://www.lemonde.fr/en/rugby/rss_full.xml" name="pageLink" class="linkBtnDay textFormat">Rugby</button></div>
+                          <div><button type="submit" value="https://news.google.com/rss/search?q=Tennis" name="pageLink" class="linkBtnDay textFormat">Tennis</button></div>
                         </div>
                       </div>
                       <div class="fastLinkCategory">
                         <p class="categoryTitles">Economy</p>
                         <div class="categoryLinks">
-                          <div><button type="submit" value="http://marginalrevolution.com/feed" name="pageLink" class="linkBtn textFormat">Marginal Revolution</button></div>
-                          <div><button type="submit" value="https://news.google.com/rss/search?q=Economy" name="pageLink" class="linkBtn textFormat">Google news</button></div>
-                          <div><button type="submit" value="https://www.lemonde.fr/en/economy/rss_full.xml" name="pageLink" class="linkBtn textFormat">Le monde</button></div>
+                          <div><button type="submit" value="http://marginalrevolution.com/feed" name="pageLink" class="<?= classCheck() ?> textFormat">Marginal Revolution</button></div>
+                          <div><button type="submit" value="https://news.google.com/rss/search?q=Economy" name="pageLink" class="<?= classCheck() ?> textFormat">Google news</button></div>
+                          <div><button type="submit" value="https://www.lemonde.fr/en/economy/rss_full.xml" name="pageLink" class="<?= classCheck() ?> textFormat">Le monde</button></div>
                         </div>
                       </div>
                       <div class="fastLinkCategory">
                         <p class="categoryTitles">Technology</p>
                         <div class="categoryLinks">
                           <div><button type="submit" value="https://techcrunch.com/feed/?guccounter=1&guce_referrer=aHR0cHM6Ly9ibG9nLmZlZWRzcG90LmNvbS8&guce_referrer_sig=AQAAAFiP_JUw9U1z-FbdwJpe4EVbEeDX1AyC6G16Nm0vFPoNdOQYtzCPHvwsKpjd18k1CsWIMopaIT9x1ZwsSpd2psu0mWRsxPq6HtbbP5Xy3-HNcjVeaiXhbuxdWtJotuOHIFQXPlP69o9Db8iBsGh5aEHgsJ3x48QwMX6v3N5SCNj2" name="pageLink" class="linkBtn textFormat">TechCrunch</button></div>
-                          <div><button type="submit" value="https://news.google.com/rss/search?q=Tech" name="pageLink" class="linkBtn textFormat">Google news</button></div>
-                          <div><button type="submit" value="https://mashable.com/feeds/rss/all" name="pageLink" class="linkBtn textFormat">Mashable</button></div>
-                          <div><button type="submit" value="https://www.wired.com/feed/rss" name="pageLink" class="linkBtn textFormat">Wired</button></div>
+                          <div><button type="submit" value="https://news.google.com/rss/search?q=Tech" name="pageLink" class="<?= classCheck() ?> textFormat">Google news</button></div>
+                          <div><button type="submit" value="https://mashable.com/feeds/rss/all" name="pageLink" class="<?= classCheck() ?> textFormat">Mashable</button></div>
+                          <div><button type="submit" value="https://www.wired.com/feed/rss" name="pageLink" class="<?= classCheck() ?> textFormat">Wired</button></div>
                         </div>
                       </div>
                   </div>

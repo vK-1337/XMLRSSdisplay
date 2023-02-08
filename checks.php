@@ -1,5 +1,9 @@
 <?php
-function modeCheck($url) {
-  return empty($_GET['mode']) || $_GET['mode'] === 'day' ? "$url?mode=day" : "$url?mode=night";
-}
+ function classCheck() {
+  return $_COOKIE['mode'] === 'night' ? 'linkBtnNight' : 'linkBtnDay';
+ }
+
+ function cardsCheck() {
+  return $_COOKIE['mode'] === 'night' ? 'nightCard textFormat' : 'dayCard textFormat';
+ }
 ?>
