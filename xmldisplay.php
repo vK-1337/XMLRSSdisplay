@@ -19,15 +19,13 @@ error_reporting(E_ERROR | E_PARSE);
           <a href="./xmldisplay.php">Accueil</a>
         </div>
         <div id="rightNav">
-          <!-- <form action="" method="get" id="nightModeForm"> -->
           <div>
             <button id='nightBtn' >MODE NUIT</button>
             <button id='dayBtn'>MODE JOUR</button>
           </div>
-          <!-- </form> -->
           <div id="flags">
-            <div id='frenchFlag'><a href=./xmldisplay.php><img src="./images/French.png" alt="French flag"></a></div>
-            <div id='englishFlag'><a href=./xmldisplayENG.php><img src="./images/English.png" alt="English flag"></a></div>
+            <div><a href=./xmldisplay.php><img src="./images/French.png" alt="French flag"></a></div>
+            <div><a href=./xmldisplayENG.php><img src="./images/English.png" alt="English flag"></a></div>
           </div>
         </div>
       </div>
@@ -183,9 +181,6 @@ error_reporting(E_ERROR | E_PARSE);
         </div>
         <!-- End of the function div -->
       </div>
-    </div>
-    <div id="footer">
-      FOOTER HERE FOOTER
     </div>
   </body>
   <!-- Javascript balise for night mode -->
