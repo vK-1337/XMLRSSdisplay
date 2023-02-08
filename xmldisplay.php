@@ -182,6 +182,7 @@ error_reporting(E_ERROR | E_PARSE);
         <!-- End of the function div -->
       </div>
     </div>
+  <?php include('footer.php');?>
   </body>
   <!-- Javascript balise for night mode -->
   <script src="script.js"></script>
