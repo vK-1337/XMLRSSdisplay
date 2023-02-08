@@ -1,10 +1,25 @@
+#footer {
+  height: 250px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+#logo {
+  height: 100px;
+  width: 150px;
+}
 
 body {
   margin: 0;
+  min-height: 100%;
 }
 
 #documentBody {
   padding-top: 30px;
+  padding-bottom: 80px;
 }
 
 #flags {

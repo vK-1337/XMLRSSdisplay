@@ -166,6 +166,7 @@ require_once('checks.php')
       <!-- End of the function div -->
     </div>
   </body>
+  <?php include('footer.php');?>
   <!-- Javascript balise for night mode -->
   <script src="script.js"></script>
 </html>

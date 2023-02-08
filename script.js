@@ -6,6 +6,7 @@ const form = document.getElementById('nightModeForm')
 const formBtn = document.getElementById('formBtn')
 const dayBtn = document.getElementById('dayBtn')
 const nightBtn = document.getElementById('nightBtn')
+const footer = document.getElementById('footer')
 
 dayBtn.addEventListener('click', () => {
   document.cookie = 'mode=day'
@@ -24,10 +25,12 @@ if ( document.cookie === 'mode=night' ) {
   navBar.style.backgroundColor = 'black'
   body.style.backgroundColor = '#12263A'
   body.style.color = 'white'
+  footer.style.backgroundColor = 'black'
 } else if ( document.cookie === 'mode=day' ) {
   dayBtn.style.display = 'none'
   nightBtn.style.display = 'block'
   navBar.style.backgroundColor = '#12263A'
   body.style.backgroundColor = 'white'
   body.style.color = 'black'
+  footer.style.backgroundColor = '#12263A'
 }
