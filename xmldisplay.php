@@ -74,44 +74,44 @@ error_reporting(E_ERROR | E_PARSE);
                           <div class="fastLinkCategory">
                             <p class="categoryTitles">Sports</p>
                             <div class="categoryLinks">
-                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Esport/" name='pageLink' class="<?=classCheck()?> textFormat">E-sports</button></div>
-                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Basket/Nba " name="pageLink" class="<?=classCheck()?> textFormat">Basket</div>
-                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Football/" name="pageLink" class="<?=classCheck()?> textFormat">Football</button></div>
-                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Rugby/" name="pageLink" class="<?=classCheck()?> textFormat">Rugby</button></div>
-                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Tennis/" name="pageLink" class="<?=classCheck()?> textFormat">Tennis</button></div>
-                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Rallye/" name="pageLink" class="<?=classCheck()?> textFormat">Rallye</button></div>
-                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Formule-1" name="pageLink" class="<?=classCheck()?> textFormat">Formule 1</button></div>
+                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Esport/" name='pageLink' class="<?=linksCheck()?> textFormat">E-sports</button></div>
+                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Basket/Nba " name="pageLink" class="<?=linksCheck()?> textFormat">Basket</div>
+                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Football/" name="pageLink" class="<?=linksCheck()?> textFormat">Football</button></div>
+                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Rugby/" name="pageLink" class="<?=linksCheck()?> textFormat">Rugby</button></div>
+                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Tennis/" name="pageLink" class="<?=linksCheck()?> textFormat">Tennis</button></div>
+                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Rallye/" name="pageLink" class="<?=linksCheck()?> textFormat">Rallye</button></div>
+                              <div><button type="submit" value="https://dwh.lequipe.fr/api/edito/rss?path=/Formule-1" name="pageLink" class="<?=linksCheck()?> textFormat">Formule 1</button></div>
                             </div>
                           </div>
                           <div class="fastLinkCategory">
                             <p class="categoryTitles">Economie</p>
                             <div class="categoryLinks">
-                              <div><button type="submit" value="https://services.lesechos.fr/rss/les-echos-economie.xml" name="pageLink" class="<?=classCheck()?> textFormat">Les echos</button></div>
-                              <div><button type="submit" value="https://feeds.leparisien.fr/leparisien/rss/economie" name="pageLink" class="<?=classCheck()?> textFormat">Le parisien</button></div>
-                              <div><button type="submit" value="https://www.lemonde.fr/economie/rss_full.xml" name="pageLink" class="<?=classCheck()?> textFormat">Le monde</button></div>
-                              <div><button type="submit" value="https://www.courrierinternational.com/feed/rubrique/economie/rss.xml" name="pageLink" class="<?=classCheck()?> textFormat">Courrier international</button></div>
+                              <div><button type="submit" value="https://services.lesechos.fr/rss/les-echos-economie.xml" name="pageLink" class="<?=linksCheck()?> textFormat">Les echos</button></div>
+                              <div><button type="submit" value="https://feeds.leparisien.fr/leparisien/rss/economie" name="pageLink" class="<?=linksCheck()?> textFormat">Le parisien</button></div>
+                              <div><button type="submit" value="https://www.lemonde.fr/economie/rss_full.xml" name="pageLink" class="<?=linksCheck()?> textFormat">Le monde</button></div>
+                              <div><button type="submit" value="https://www.courrierinternational.com/feed/rubrique/economie/rss.xml" name="pageLink" class="<?=linksCheck()?> textFormat">Courrier international</button></div>
                             </div>
                           </div>
                           <div class="fastLinkCategory">
                             <p class="categoryTitles">Technologie</p>
                             <div class="categoryLinks">
-                              <div><button type="submit" value="https://www.sciencesetavenir.fr/high-tech/rss.xml" name="pageLink" class="<?=classCheck()?> textFormat">High-tech</button></div>
-                              <div><button type="submit" value="https://services.lesechos.fr/rss/les-echos-tech-medias.xml" name="pageLink" class="<?=classCheck()?> textFormat">Tech et médias</button></div>
-                              <div><button type="submit" value="https://www.01net.com/actualites/feed/" name="pageLink" class="<?=classCheck()?> textFormat">Actualités 01 net</button></div>
-                              <div><button type="submit" value="https://www.01net.com/actualites/produits/jeux-video-produits/feed/" name="pageLink" class="<?=classCheck()?> textFormat">Jeux vidéos</button></div>
-                              <div><button type="submit" value="https://www.01net.com/actualites/produits/photo-produits/feed/" name="pageLink" class="<?=classCheck()?> textFormat">Photo</button></div>
-                              <div><button type="submit" value="https://overclocking.com/feed/" name="pageLink" class="<?=classCheck()?> textFormat">Overclocking / Hardware</button></div>
+                              <div><button type="submit" value="https://www.sciencesetavenir.fr/high-tech/rss.xml" name="pageLink" class="<?=linksCheck()?> textFormat">High-tech</button></div>
+                              <div><button type="submit" value="https://services.lesechos.fr/rss/les-echos-tech-medias.xml" name="pageLink" class="<?=linksCheck()?> textFormat">Tech et médias</button></div>
+                              <div><button type="submit" value="https://www.01net.com/actualites/feed/" name="pageLink" class="<?=linksCheck()?> textFormat">Actualités 01 net</button></div>
+                              <div><button type="submit" value="https://www.01net.com/actualites/produits/jeux-video-produits/feed/" name="pageLink" class="<?=linksCheck()?> textFormat">Jeux vidéos</button></div>
+                              <div><button type="submit" value="https://www.01net.com/actualites/produits/photo-produits/feed/" name="pageLink" class="<?=linksCheck()?> textFormat">Photo</button></div>
+                              <div><button type="submit" value="https://overclocking.com/feed/" name="pageLink" class="<?=linksCheck()?> textFormat">Overclocking / Hardware</button></div>
                             </div>
                           </div>
                           <div class="fastLinkCategory">
                             <p class="categoryTitles">Sciences</p>
                             <div class="categoryLinks">
-                              <div><button type="submit" value="https://www.sciencesetavenir.fr/nutrition/rss.xml" name="pageLink" class="<?=classCheck()?> textFormat">Nutrition</button></div>
-                              <div><button type="submit" value="https://www.sciencesetavenir.fr/sante/rss.xml" name="pageLink" class="<?=classCheck()?> textFormat">Santé</button></div>
-                              <div><button type="submit" value="https://www.sciencesetavenir.fr/espace/rss.xml" name="pageLink" class="<?=classCheck()?> textFormat">Espace</button></div>
-                              <div><button type="submit" value="https://www.sciencesetavenir.fr/nature-environnement/rss.xml" name="pageLink" class="<?=classCheck()?> textFormat">Nature</button></div>
-                              <div><button type="submit" value="https://www.sciencesetavenir.fr/archeo-paleo/rss.xml" name="pageLink" class="<?=classCheck()?> textFormat">Archéo & paléo</button></div>
-                              <div><button type="submit" value="https://www.sciencesetavenir.fr/fondamental/rss.xml" name="pageLink" class="<?=classCheck()?> textFormat">Fondamental</button></div>
+                              <div><button type="submit" value="https://www.sciencesetavenir.fr/nutrition/rss.xml" name="pageLink" class="<?=linksCheck()?> textFormat">Nutrition</button></div>
+                              <div><button type="submit" value="https://www.sciencesetavenir.fr/sante/rss.xml" name="pageLink" class="<?=linksCheck()?> textFormat">Santé</button></div>
+                              <div><button type="submit" value="https://www.sciencesetavenir.fr/espace/rss.xml" name="pageLink" class="<?=linksCheck()?> textFormat">Espace</button></div>
+                              <div><button type="submit" value="https://www.sciencesetavenir.fr/nature-environnement/rss.xml" name="pageLink" class="<?=linksCheck()?> textFormat">Nature</button></div>
+                              <div><button type="submit" value="https://www.sciencesetavenir.fr/archeo-paleo/rss.xml" name="pageLink" class="<?=linksCheck()?> textFormat">Archéo & paléo</button></div>
+                              <div><button type="submit" value="https://www.sciencesetavenir.fr/fondamental/rss.xml" name="pageLink" class="<?=linksCheck()?> textFormat">Fondamental</button></div>
                             </div>
                           </div>
                       </div>

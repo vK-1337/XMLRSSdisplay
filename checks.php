@@ -1,5 +1,5 @@
 <?php
- function classCheck() {
+ function linksCheck() {
   return $_COOKIE['mode'] === 'night' ? 'linkBtnNight' : 'linkBtnDay';
  }
 
