@@ -1,6 +1,11 @@
+
 body {
   width: 100%;
   margin: 0;
+}
+
+#documentBody {
+  padding-top: 30px;
 }
 
 body::-webkit-scrollbar {
@@ -13,7 +18,6 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 40px;
   background-color: #12263A;
-  margin-bottom: 30px;
   color: white;
   align-items: center;
   justify-content: space-between;
@@ -40,7 +44,7 @@ body::-webkit-scrollbar {
   margin-left: 20px;
 }
 
-#card {
+.card {
   display: flex;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: lighter;
@@ -204,7 +208,16 @@ a {
   margin: 40px;
 }
 
-.linkBtn {
+#dayBtn {
+  display: none;
+}
+
+#nightBtn {
+  display: block;
+}
+
+.linkBtnDay {
+  color: black;
   border: none;
   background-color: white;
   cursor: pointer;
@@ -212,9 +225,25 @@ a {
   padding: 10px;
 }
 
-.linkBtn:hover {
+.linkBtnNight {
+  color: white;
+  border: none;
+  background-color: #12263A;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.linkBtnDay:hover {
   background-color: black;
   color: white;
+  transition-duration: 0.4s;
+  padding: 10px;
+}
+
+.linkBtnNight:hover {
+  background-color: white;
+  color: black;
   transition-duration: 0.4s;
   padding: 10px;
 }
@@ -284,6 +313,4 @@ a {
     align-items: center;
     justify-content: center;
   }
-
-
 }

@@ -17,7 +17,7 @@ function xmlToPage($url, $numberOfArticles, $page)
         }
         // Then generating the article
         echo "<a href='$news->link'>";
-        echo "<div id='card'>";
+        echo "<div class='card'>";
         if (isset($image)) {
           echo "<div><img src='$image'/></div>";
         }
@@ -49,7 +49,7 @@ function xmlToPage($url, $numberOfArticles, $page)
             $image = $contentattr["url"];
           }
           echo " <a href='$news->link'>";
-          echo "<div id='card'>";
+          echo "<div class='card'>";
           if (isset($image)) {
             echo "<div><img src='$image'/></div>";
           }
