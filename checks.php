@@ -8,6 +8,6 @@
  }
 
  function descriptionCheck() {
-  return $_COOKIE['mode'] === 'night' ? 'cardRightSideNight' : 'cardRightSideDay';
+  return $_COOKIE['mode'] === 'night' ? 'cardRightSideNight ' : 'cardRightSideDay ';
  }
 ?>

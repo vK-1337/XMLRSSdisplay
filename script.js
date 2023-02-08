@@ -6,7 +6,7 @@ const form = document.getElementById('nightModeForm')
 const formBtn = document.getElementById('formBtn')
 const dayBtn = document.getElementById('dayBtn')
 const nightBtn = document.getElementById('nightBtn')
-const allCardsLinks = document.querySelectorAll('#description a')
+
 dayBtn.addEventListener('click', () => {
   document.cookie = 'mode=day'
   window.location.reload()

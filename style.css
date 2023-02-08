@@ -80,12 +80,6 @@ img {
   height: 150px;
 }
 
-#cardRightSide {
-  text-align: center;
-  padding: 30px;
-  width: 700px;
-}
-
 #title {
   font-weight: bold;
   margin-bottom: 10px;
@@ -278,6 +272,9 @@ a {
 
 #cardRightSideNight {
   color: white;
+  text-align: center;
+  padding: 30px;
+  width: 700px;
 }
 
 #cardRightSideNight a {
@@ -286,6 +283,9 @@ a {
 
 #cardRightSideDay {
   color: black;
+  text-align: center;
+  padding: 30px;
+  width: 700px;
 }
 
 #cardRightSideDay a {

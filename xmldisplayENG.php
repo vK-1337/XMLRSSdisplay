@@ -163,7 +163,7 @@ require_once('checks.php')
         }
         ?>
       </div>
-    <!-- End of the function div -->
+      <!-- End of the function div -->
     </div>
   </body>
   <!-- Javascript balise for night mode -->
