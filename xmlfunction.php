@@ -22,7 +22,7 @@ function xmlToPage($url, $numberOfArticles, $page)
         if (isset($image)) {
           echo "<div><img src='$image'/></div>";
         }
-        echo "<div id='cardRightSide'>";
+        echo "<div id=". descriptionCheck(). ">";
         echo "<div id='title'>$news->title</div>";
         echo "<div id='description'>$news->description</div>";
         echo "</div></div>";
@@ -54,7 +54,7 @@ function xmlToPage($url, $numberOfArticles, $page)
           if (isset($image)) {
             echo "<div><img src='$image'/></div>";
           }
-          echo "<div id='cardRightSide'>";
+          echo "<div id=". descriptionCheck(). ">";
           echo "<div id='title'>$news->title</div>";
           echo "<div id='description'>$news->description</div>";
           echo "</div></div>";
