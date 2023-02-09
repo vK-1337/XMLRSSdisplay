@@ -10,6 +10,8 @@ error_reporting(E_ERROR | E_PARSE);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles XML</title>
+    <!-- Font awesome script -->
+    <script src="https://kit.fontawesome.com/c936acb2f9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -19,9 +21,9 @@ error_reporting(E_ERROR | E_PARSE);
           <a href="./xmldisplay.php">Accueil</a>
         </div>
         <div id="rightNav">
-          <div>
-            <button id='nightBtn' >MODE NUIT</button>
-            <button id='dayBtn'>MODE JOUR</button>
+          <div id='modesBtnDiv'>
+            <i class="fa-regular fa-moon" id='nightBtn'></i>
+            <i class="fa-regular fa-sun" id='dayBtn'></i>
           </div>
           <div id="flags">
             <div><a href=./xmldisplay.php><img src="./images/French.png" alt="French flag"></a></div>

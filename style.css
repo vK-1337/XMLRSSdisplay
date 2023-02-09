@@ -200,6 +200,7 @@ a {
 }
 
 #willDiv {
+  margin-bottom: 100px;
   margin-top: 30px;
   display: flex;
   justify-content: center;
@@ -237,10 +238,14 @@ a {
 
 #dayBtn {
   display: none;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 #nightBtn {
   display: block;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .linkBtnDay {

@@ -10,6 +10,8 @@ require_once('checks.php')
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XML Articles</title>
+    <!-- Font awesome script -->
+    <script src="https://kit.fontawesome.com/c936acb2f9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -18,9 +20,9 @@ require_once('checks.php')
         <a href="./xmldisplayENG.php">Homepage</a>
       </div>
       <div id="rightNav">
-        <div>
-          <button id='nightBtn' >MODE NUIT</button>
-          <button id='dayBtn'>MODE JOUR</button>
+        <div id='modesBtnDiv'>
+          <i class="fa-regular fa-moon" id='nightBtn'></i>
+          <i class="fa-regular fa-sun" id='dayBtn'></i>
         </div>
         <div id='flags'>
           <div><a href="./xmldisplay.php"><img src="./images/French.png" alt="French flag"></a></div>
@@ -157,7 +159,7 @@ require_once('checks.php')
             xmlToPage($url, $numberOfArticles, $page);
           } else {
             // Invalid input error message
-            echo "<div id='invalink' class='textFormat'> Lien non valide, veuillez entrer un lien .XML valide </div>";
+            echo "<div id='invalink' class='textFormat'> Invalid link ! Please enter a valid XML link </div>";
             echo "<div id='willDiv'><img src='./images/will-smith-crying-meme.jpeg' alt='Will Smith crying' id='willSmithCrying'><div>";
           }
         }
@@ -166,6 +168,7 @@ require_once('checks.php')
       <!-- End of the function div -->
     </div>
   </body>
+  <!-- Footer -->
   <?php include('footer.php');?>
   <!-- Javascript balise for night mode -->
   <script src="script.js"></script>
