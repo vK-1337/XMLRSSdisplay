@@ -1,7 +1,8 @@
 <!-- Disabling warning errors -->
 <?php
-require('checks.php');
 error_reporting(E_ERROR | E_PARSE);
+require('checks.php');
+require_once('pagesfunction.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +11,8 @@ error_reporting(E_ERROR | E_PARSE);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles XML</title>
+    <!-- Font awesome script -->
+    <script src="https://kit.fontawesome.com/c936acb2f9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -19,9 +22,9 @@ error_reporting(E_ERROR | E_PARSE);
           <a href="./xmldisplay.php">Accueil</a>
         </div>
         <div id="rightNav">
-          <div>
-            <button id='nightBtn' >MODE NUIT</button>
-            <button id='dayBtn'>MODE JOUR</button>
+          <div id='modesBtnDiv'>
+            <i class="fa-regular fa-moon" id='nightBtn'></i>
+            <i class="fa-regular fa-sun" id='dayBtn'></i>
           </div>
           <div id="flags">
             <div><a href=./xmldisplay.php><img src="./images/French.png" alt="French flag"></a></div>
@@ -120,33 +123,7 @@ error_reporting(E_ERROR | E_PARSE);
             <!-- This is the pages numbers buttons which are generated depending on how much articles per page there is -->
             <?php if (isset($_GET['pageLink']) && isset($_GET['articlesNumber']) && !empty($_GET['pageLink'])) {
               $url = $_GET['pageLink'];
-              if (file_get_contents($url)) {
-                $xml = file_get_contents($url);
-                $xml = simplexml_load_string($xml);
-                // intval function is there to get the number from the articlesNumber string
-                $numberOfArticlesWantedInteger = intval($_GET['articlesNumber']);
-                // The numberOfPages variable is there to count how much page we need
-                $numberOfPages = count($xml->channel->item) / $numberOfArticlesWantedInteger;
-                // Then we use numberOfPages to stop the loop when generating the pages buttons
-                echo "<div id='pagesnumbers'>";
-                if ($numberOfPages > 1) {
-                  echo "<p class='textFormat'> Pages :</p>";
-                  // In the for loop, we use two variables :
-                  // $i to put the right value in the URL which is the one we gonna pass in the function later when we click and submit the page
-                  // $k to DISPLAY the value inside the button since we are human and counting from page 1 and not 0
-                  for ($j = 0, $k = 1; $j < $numberOfPages; $j++, $k++) {
-                    echo "<div class='numberscards'>";
-                    // If this is the active page it will echo the div with black background
-                    if ($j == $_GET['page']) {
-                      echo "<button type='submit' value='$j' name='page' class='pagenumber active textFormat'>$k</button>";
-                    } else {
-                      echo "<button type='submit' value='$j' name='page' class='pagenumber textFormat'>$k</button>";
-                    }
-                    echo "</div>";
-                  }
-                  echo "</div>";
-                }
-              }
+              pages($url);
             }
             ?>
             <!-- End of pages numbers buttons -->
