@@ -1,15 +1,37 @@
-#footer {
-  height: 250px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+a {
+  text-decoration: none;
+  color: black;
+  display: contents;
 }
 
-#logo {
-  height: 100px;
-  width: 150px;
+.active {
+  background-color: black;
+  color: white;
+}
+
+#articlesNumberInput {
+  width: 50px;
+  height: 30px;
+}
+
+#backToTopBtn {
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#backToTopBtn:hover {
+  background-color: black;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#backToTopDiv {
+  text-align: end;
+  margin: 30px auto;
+  width: fit-content;
 }
 
 body {
@@ -17,50 +39,46 @@ body {
   min-height: 100%;
 }
 
-#documentBody {
-  padding-top: 30px;
-  padding-bottom: 80px;
-}
-
-#flags {
-  width: 400px;
-  display: flex;
-}
-
 body::-webkit-scrollbar {
   width: 0;
   margin: 0;
 }
 
+#cardRightSideDay {
+  color: black;
+  text-align: center;
+  padding: 30px;
+  width: 700px;
+}
 
-#navBar {
-  display: flex;
-  width: 100%;
-  height: 40px;
-  background-color: #12263A;
+#cardRightSideDay a {
+  color: black;
+}
+
+#cardRightSideNight {
   color: white;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
+  text-align: center;
+  padding: 30px;
+  width: 700px;
 }
 
-#navBar a {
+#cardRightSideNight a {
   color: white;
 }
 
-#rightNav {
-  width: 220px;
+#categoriesDiv {
   display: flex;
+  justify-content: space-around;
 }
 
-#rightNav img {
-  padding-left: 20px;
-  width: 30px;
-  height: 30px;
+.categoryTitles {
+  font-weight: bold;
 }
 
-#homeBtn {
-  margin-left: 20px;
+#dayBtn {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .dayCard {
@@ -75,49 +93,34 @@ body::-webkit-scrollbar {
   border-radius: 10px;
 }
 
-.nightCard {
-  display: flex;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: lighter;
-  margin: 60px auto;
-  padding: 30px;
-  width: 800px;
-  align-items: center;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 10px;
-  background-color: black;
-  color: white;
+#description img {
+  width: 100%;
+  height: 100%;
+  margin: 15px 0;
 }
 
-img {
-  width: 300px;
-  border-radius: 10px;
-  height: 150px;
+#documentBody {
+  padding-top: 30px;
+  padding-bottom: 80px;
 }
 
-#title {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  display: contents;
-}
-
-.formText {
- text-align: center;
-}
-
-#pageLink {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border: 1px solid;
-  border-radius: 5px;
+#fastLinksTitle {
   text-align: center;
-  width: 800px;
-  height: 30px;
-  margin-top: 10px;
+  margin: 40px;
+}
+
+#flags {
+  width: 400px;
+  display: flex;
+}
+
+#footer {
+  height: 250px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 #formBtn {
@@ -141,20 +144,115 @@ a {
   margin-top: 20px;
 }
 
+.formText {
+  text-align: center;
+ }
+
+#homeBtn {
+  margin-left: 20px;
+}
+
+img {
+  width: 300px;
+  border-radius: 10px;
+  height: 150px;
+}
+
+#invalink {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.linkBtnDay {
+  color: black;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.linkBtnDay:hover {
+  background-color: black;
+  color: white;
+  transition-duration: 0.4s;
+  padding: 10px;
+}
+
+.linkBtnNight {
+  color: white;
+  border: none;
+  background-color: #12263A;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.linkBtnNight:hover {
+  background-color: white;
+  color: black;
+  transition-duration: 0.4s;
+  padding: 10px;
+}
+
+#logo {
+  height: 100px;
+  width: 150px;
+}
+
+#navBar {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  background-color: #12263A;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+#navBar a {
+  color: white;
+}
+
+#nightBtn {
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nightCard {
+  display: flex;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: lighter;
+  margin: 60px auto;
+  padding: 30px;
+  width: 800px;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+
+.numberscards {
+  margin-left: 10px;
+}
+
 #numberChoice {
   text-align: center;
   margin-top: 30px;
 }
 
-#articlesNumberInput {
-  width: 50px;
+#pageLink {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+  width: 800px;
   height: 30px;
-}
-
-.textFormat {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 20px;
-  font-weight: lighter;
+  margin-top: 10px;
 }
 
 #pagesnumbers {
@@ -175,29 +273,32 @@ a {
   margin: 3px;
 }
 
-.active {
-  background-color: black;
-  color: white;
-}
-
 .pagenumber:hover {
   background-color: black;
   color: white;
   transition-duration: 0.4s;
 }
 
-.numberscards {
-  margin-left: 10px;
+#rightNav {
+  width: 220px;
+  display: flex;
 }
 
-#invalink {
-  text-align: center;
-  margin-top: 30px;
+#rightNav img {
+  padding-left: 20px;
+  width: 30px;
+  height: 30px;
 }
 
-#willSmithCrying {
-  height: 400px;
-  width: 600px;
+.textFormat {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+#title {
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 #willDiv {
@@ -207,152 +308,23 @@ a {
   justify-content: center;
 }
 
-#backToTopDiv {
-  text-align: end;
-  margin: 30px auto;
-  width: fit-content;
-}
-
-#backToTopBtn {
-  border: none;
-  padding: 20px;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-#backToTopBtn:hover {
-  background-color: black;
-  color: white;
-  transition-duration: 0.4s;
-}
-
-#categoriesDiv {
-  display: flex;
-  justify-content: space-around;
-}
-
-#fastLinksTitle {
-  text-align: center;
-  margin: 40px;
-}
-
-#dayBtn {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-#nightBtn {
-  display: block;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.linkBtnDay {
-  color: black;
-  border: none;
-  background-color: white;
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.linkBtnNight {
-  color: white;
-  border: none;
-  background-color: #12263A;
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.linkBtnDay:hover {
-  background-color: black;
-  color: white;
-  transition-duration: 0.4s;
-  padding: 10px;
-}
-
-.linkBtnNight:hover {
-  background-color: white;
-  color: black;
-  transition-duration: 0.4s;
-  padding: 10px;
-}
-
-.categoryTitles {
-  font-weight: bold;
-}
-
-#description img {
-  width: 100%;
-  height: 100%;
-  margin: 15px 0;
-}
-
-#cardRightSideNight {
-  color: white;
-  text-align: center;
-  padding: 30px;
-  width: 700px;
-}
-
-#cardRightSideNight a {
-  color: white;
-}
-
-#cardRightSideDay {
-  color: black;
-  text-align: center;
-  padding: 30px;
-  width: 700px;
-}
-
-#cardRightSideDay a {
-  color: black;
+#willSmithCrying {
+  height: 400px;
+  width: 600px;
 }
 
 @media screen and (max-width: 1024px) {
 
-  img {
-    width: 100%;
-    margin: 0 auto;
-  }
-
   #card {
-   display: block;
-   width: 70%;
-   font-size: 90%;
+    display: block;
+    width: 70%;
+    font-size: 90%;
   }
 
   #cardRightSide {
     width: 100%;
     padding: 0;
     margin-top: 20px;
-  }
-
-   #pageLink {
-    width: 80%;
-  }
-
-  .textFormat {
-    font-size: 100%;
-  }
-
-  #willSmithCrying {
-    width: 90%;
-    height: 90%;
-  }
-
-  #pagesnumbers {
-    justify-content: center;
-    font-size: 80%;
-  }
-
-  .categoryTitles {
-    margin-left: 20px;
-    text-align: center;
   }
 
   #categoriesDiv {
@@ -366,5 +338,33 @@ a {
     font-size: 15px;
     align-items: center;
     justify-content: center;
+  }
+
+  .categoryTitles {
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  #pageLink {
+    width: 80%;
+  }
+
+  .textFormat {
+    font-size: 100%;
+  }
+
+  img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #pagesnumbers {
+    justify-content: center;
+    font-size: 80%;
+  }
+
+  #willSmithCrying {
+    width: 90%;
+    height: 90%;
   }
 }
