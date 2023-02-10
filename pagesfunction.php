@@ -26,6 +26,7 @@ function pages($url) {
         echo "</div>";
       }
     } else if ( $numberOfPages > 8 && $activePage > 8 ) {
+      // When there is more than 8 pages the display only display 2 first pages and then the active page
       echo "<div class='numberscards'>";
       echo " <span class='textFormat'> Pages :</span>";
       for ( $i = 0, $j = $activePage, $k = 1, $l = 2; $i < $numberOfPages ; $i++, $k++, $l++) {

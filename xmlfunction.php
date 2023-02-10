@@ -32,7 +32,14 @@ function xmlToPage($url, $numberOfArticles, $page)
           break;
         }
       }
-      echo "<a href='#top'><div id='backToTopDiv'><button id='backToTopBtn' class='textFormat'> Haut de page </button></div></a>";
+      $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+      echo "<a href='#top'>";
+      if ( strpos($url, 'ENG')) {
+        echo "<div id='backToTopDiv'><button id='backToTopBtn' class='textFormat'> Back to top </button></div>";
+      } else {
+        echo "<div id='backToTopDiv'><button id='backToTopBtn' class='textFormat'> Haut de page </button></div>";
+      }
+      echo "</a>";
     } else {
       // $j is the start of our loop
       // $i will be the index to know when we need to start displaying articles that's why it gets the $_GET['articlesNumber'],
@@ -65,8 +72,13 @@ function xmlToPage($url, $numberOfArticles, $page)
           }
         }
       }
+      $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
       echo "<a href='#top'>";
-      echo "<div id='backToTopDiv'><button id='backToTopBtn' class='textFormat'> Haut de page </button></div>";
+      if ( strpos($url, 'ENG')) {
+        echo "<div id='backToTopDiv'><button id='backToTopBtn' class='textFormat'> Back to top </button></div>";
+      } else {
+        echo "<div id='backToTopDiv'><button id='backToTopBtn' class='textFormat'> Haut de page </button></div>";
+      }
       echo "</a>";
     }
   }
