@@ -345,22 +345,22 @@ img {
     text-align: center;
   }
 
-  #pageLink {
-    width: 80%;
-  }
-
-  .textFormat {
-    font-size: 100%;
-  }
-
   img {
     width: 100%;
     margin: 0 auto;
   }
 
+  #pageLink {
+    width: 80%;
+  }
+
   #pagesnumbers {
     justify-content: center;
     font-size: 80%;
+  }
+
+  .textFormat {
+    font-size: 100%;
   }
 
   #willSmithCrying {
